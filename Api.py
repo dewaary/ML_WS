@@ -42,8 +42,7 @@ def predict():
     clf = joblib.load('InstagramComment.pkl')
 
     resultPredict = clf[0].predict(X_New)
-    # target_names = ['yes', 'no']
-    # return jsonify({'message': format(clf[1].Label[resultPredict])})
+
     return jsonify({'message': format(resultPredict)})
 
 app.run()
